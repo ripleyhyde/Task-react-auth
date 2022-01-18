@@ -4,21 +4,25 @@ import "./App.css";
 import ChatRoom from "./components/ChatRoom";
 import ChatRoomsList from "./components/ChatRoomsList";
 import { Route, Switch } from "react-router";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="__main">
-      <div className="main__chatbody">
-        <Switch>
-          <Route path="/room/:roomSlug">
-            <ChatRoom />
-          </Route>
-          <Route exact path="/">
-            <center>
-              <ChatRoomsList />
-            </center>
-          </Route>
-        </Switch>
+    <div>
+      <NavBar />
+      <div className="__main">
+        <div className="main__chatbody">
+          <Switch>
+            <Route path="/room/:roomSlug">
+              <ChatRoom />
+            </Route>
+            <Route exact path="/">
+              <center>
+                <ChatRoomsList />
+              </center>
+            </Route>
+          </Switch>
+        </div>
       </div>
     </div>
   );

@@ -15,7 +15,6 @@ function ChatRoomitem(props) {
 
   const handleDelete = () => {
     roomStore.deleteRoom(room.id);
-    // call a function from app to delete a room (pass room.id as a parameter)
   };
   return (
     <div className="group">

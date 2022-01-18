@@ -11,13 +11,12 @@ class RoomStore {
       createRoom: action,
       deleteRoom: action,
       updateRoom: action,
-      createNewMessage: action,
     });
   }
   fetchRoom = async () => {
     try {
       const response = await axios.get(
-        "https://coded-task-axios-be.herokuapp.com/rooms"
+        "https://coded-task-authentication-be.herokuapp.com/rooms"
       );
       this.rooms = response.data;
     } catch (e) {
@@ -27,7 +26,7 @@ class RoomStore {
   createRoom = async (newRoom) => {
     try {
       const response = await axios.post(
-        "https://coded-task-axios-be.herokuapp.com/rooms",
+        "https://coded-task-authentication-be.herokuapp.com/rooms",
         newRoom
       );
 
@@ -42,7 +41,7 @@ class RoomStore {
   deleteRoom = async (id) => {
     try {
       await axios.delete(
-        `https://coded-task-axios-be.herokuapp.com/rooms/${id}`
+        `https://coded-task-authentication-be.herokuapp.com/rooms/${id}`
       );
       const tempRoom = this.rooms.filter((room) => room.id !== id);
       this.rooms = tempRoom;
@@ -54,32 +53,13 @@ class RoomStore {
   updateRoom = async (updatedRoom) => {
     try {
       const response = await axios.put(
-        `https://coded-task-axios-be.herokuapp.com/rooms/${updatedRoom.id}`,
+        `https://coded-task-authentication-be.herokuapp.com/rooms/${updatedRoom.id}`,
         updatedRoom
       );
       const tempRoom = this.rooms.map((room) =>
         room.id === updatedRoom.id ? response.data : room
       );
       this.rooms = tempRoom;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  createNewMessage = async (msg, room) => {
-    console.log(msg);
-    try {
-      const response = await axios.post(
-        `https://coded-task-axios-be.herokuapp.com/rooms/msg/${room.id}`,
-        msg
-      );
-
-      const newMsg = response.data;
-      console.log(newMsg);
-      room.messages.push(newMsg);
-      //   setRooms([...rooms]);
-
-      // setRooms([...room.messages, newMsg]);
-      // console.log([...room.messages, newMsg]);
     } catch (error) {
       console.log(error);
     }

@@ -20,8 +20,6 @@ function ChatRoom() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    roomStore.createNewMessage(msg, room);
-    setMsg({ msg: "" });
   };
 
   return (
