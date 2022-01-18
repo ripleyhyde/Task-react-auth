@@ -10,9 +10,9 @@
 ### Part One : Sign up
 
 1. in SignUpModal.js you have a form, complete the form
-       1. it should have two inputs : username and password
-       2. dont forget handle change 
-       3. dont forget handle submit
+     * it should have two inputs : username and password
+     * dont forget handle change 
+     * dont forget handle submit
 2. create an instance file to add your base Url    
 3. Create authStore
 4. `import { observable, makeAutoObservable, action } from 'mobx';`
@@ -26,9 +26,9 @@
 ### Part Two: Sign in
 
 1. create a component called SignInModal.js it should have a form
-       1. it should have two inputs : username and password
-       2. dont forget handle change 
-       3. dont forget handle submit
+      * it should have two inputs : username and password
+      * dont forget handle change 
+      * dont forget handle submit
 2. create sign ip method 
 3. create a set user method
 4. call the sign in method in the modal
