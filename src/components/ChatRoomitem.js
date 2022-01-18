@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import UpdateRoomModal from "./UpdateRoomModal";
 import roomStore from "../roomStore";
 
-export default function ChatRoomitem(props) {
+function ChatRoomitem(props) {
   const room = props.room;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -43,3 +43,4 @@ export default function ChatRoomitem(props) {
     </div>
   );
 }
+export default ChatRoomitem;

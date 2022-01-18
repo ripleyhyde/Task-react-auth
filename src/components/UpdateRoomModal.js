@@ -2,7 +2,7 @@ import { Modal, Button, InputGroup, Form } from "react-bootstrap";
 import React, { useState } from "react";
 import roomStore from "../roomStore";
 
-export default function UpdateRoomModal(props) {
+function UpdateRoomModal(props) {
   const [room, setRoom] = useState({
     id: props.room.id,
     title: props.room.title,
@@ -63,3 +63,4 @@ export default function UpdateRoomModal(props) {
     </Modal>
   );
 }
+export default UpdateRoomModal;

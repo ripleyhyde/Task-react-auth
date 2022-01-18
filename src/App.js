@@ -6,8 +6,6 @@ import ChatRoomsList from "./components/ChatRoomsList";
 import { Route, Switch } from "react-router";
 
 function App() {
-  // const [rooms, setRooms] = useState([]);
-
   return (
     <div className="__main">
       <div className="main__chatbody">

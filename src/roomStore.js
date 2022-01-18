@@ -31,8 +31,6 @@ class RoomStore {
         newRoom
       );
 
-      //   setRooms([...rooms, response.data]);
-
       this.rooms.push(response.data);
     } catch (e) {
       alert("cannot create new room");
@@ -59,10 +57,10 @@ class RoomStore {
         `https://coded-task-axios-be.herokuapp.com/rooms/${updatedRoom.id}`,
         updatedRoom
       );
-      let tempRooms = this.rooms.map((room) =>
+      const tempRoom = this.rooms.map((room) =>
         room.id === updatedRoom.id ? response.data : room
       );
-      this.rooms = tempRooms;
+      this.rooms = tempRoom;
     } catch (error) {
       console.log(error);
     }

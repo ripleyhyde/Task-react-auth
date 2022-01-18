@@ -49,6 +49,7 @@ function ChatRoom() {
           <input
             type="text"
             name="msg"
+            value={msg.msg}
             onChange={handleChange}
             placeholder="Type a message here"
           />
