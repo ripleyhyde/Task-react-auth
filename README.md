@@ -33,3 +33,22 @@
 3. create a set user method
 4. call the sign in method in the modal
 
+
+```js
+Endpoints:
+
+Signin:
+Endpoint: https://coded-task-authentication-be.herokuapp.com/signin
+POST
+Data required: username,password
+
+Signup:
+Endpoint: https://coded-task-authentication-be.herokuapp.com/signup
+POST
+Data required: username,password
+
+```
+
+
+
+
