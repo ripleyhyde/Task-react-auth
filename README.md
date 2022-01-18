@@ -1,53 +1,35 @@
 # Chatting website
 
-## First things first:
+## Instructions:
 1. fork [this repo](https://github.com/JoinCODED/Task-react-MobX/)
 2. clone 
 4. `npm install`
 5. `npm start`
 
-## Instructions
-1. `npm install mobx mobx-react`
-2. Create a file called roomStore in src
-3. define the room class and inside create an empty array rooms =[]
-4. `import { makeObservable, observable, action } from "mobx";`
-5. make a constructor that will make this a store 
-6. create a store and export it
+
+### Part One : Sign up
+
+1. in SignUpModal.js you have a form, complete the form
+       1. it should have two inputs : username and password
+       2. dont forget handle change 
+       3. dont forget handle submit
+2. create an instance file to add your base Url    
+3. Create authStore
+4. `import { observable, makeAutoObservable, action } from 'mobx';`
+5. `import axios from "axios";`
+6. create user = null
+7. create constructor
+8. create sign up method 
+9. call it in sign up modal 
 
 
-## Fetch rooms :
-7. move fetchRooms function to the store and modify it (remove setRooms)
-8. add fetchRoom as an action in the constructor 
-9. in the list component :
-    1. `import roomStore from "../roomStore";`
-    2. `import { observer } from "mobx-react";`
-    3. add useEffect to call fetchRooms
-    4.  add observer before component export if it needs too 
+### Part Two: Sign in
 
-## Create a room:
-1. move createRoom function to the store 
-2. add createRoom as an action in the constructor 
-9. in the create room component :
-    1. `import roomStore from "../roomStore";`
-    2. `import { observer } from "mobx-react";`
-    3. call createRoom in the correct place (instead of the old one)
-    4.  add observer before component export if it needs too 
-
-
-## Delete a room :
-1. move deleteRoom function to the store 
-2. add deleteRoom as an action in the constructor 
-9. in the room component :
-    1. `import roomStore from "../roomStore";`
-    2. `import { observer } from "mobx-react";`
-    3. call deleteRoom in the correct place (instead of the old one)
-    4.  add observer before component export if it needs too 
-
-
-## Clean up:
-dont forget to clean up the code in App.js and remove room state as you no longer need it !
-
-### Challenge
-## Update , Create a msg:
-no steps ! its a challenge 
+1. create a component called SignInModal.js it should have a form
+       1. it should have two inputs : username and password
+       2. dont forget handle change 
+       3. dont forget handle submit
+2. create sign ip method 
+3. create a set user method
+4. call the sign in method in the modal
 
