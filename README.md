@@ -33,6 +33,12 @@
 3. create a set user method
 4. call the sign in method in the modal
 
+### Part Three : NavBar and Logout
+1. if the user is logged in he/she should see her username in the navbar
+2. add a Logout button in the navbar 
+3. add a Logout methon in the authStore
+4. call the logout method when the user clicks the logout button
+
 
 ```js
 Endpoints:
