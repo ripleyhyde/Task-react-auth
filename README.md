@@ -13,8 +13,9 @@
      * it should have two inputs : username and password
      * dont forget handle change 
      * dont forget handle submit
-2. create an instance file to add your base Url    
-3. Create authStore
+2. create a folder called stores
+2. inside stores folder create an instance file to add your base Url    
+3. inside stores folder create authStore
 4. `import { observable, makeAutoObservable, action } from 'mobx';`
 5. `import axios from "axios";`
 6. create user = null
