@@ -17,7 +17,7 @@
 2. inside stores folder create an instance file to add your base Url    
 3. inside stores folder create authStore
 4. `import { observable, makeAutoObservable, action } from 'mobx';`
-5. `import axios from "axios";`
+5. import the istance/api 
 6. create user = null
 7. create constructor
 8. create sign up method 
