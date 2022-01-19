@@ -1,7 +1,7 @@
 # Chatting website
 
 ## Instructions:
-1. fork [this repo](https://github.com/JoinCODED/Task-react-MobX/)
+1. fork [this repo](https://github.com/JoinCODED/Task-react-auth)
 2. clone 
 4. `npm install`
 5. `npm start`
